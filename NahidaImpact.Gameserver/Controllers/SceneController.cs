@@ -1,5 +1,6 @@
 ﻿using NahidaImpact.Gameserver.Controllers.Attributes;
 using NahidaImpact.Gameserver.Controllers.Result;
+using NahidaImpact.Gameserver.Game;
 using NahidaImpact.Gameserver.Game.Scene;
 using NahidaImpact.Protocol;
 
@@ -10,6 +11,39 @@ internal class SceneController : ControllerBase
 {
     // TODO: Scene management, Entity management!!!
     public const uint WeaponEntityId = 100663300;
+
+    [NetCommand(CmdType.GetScenePointReq)]
+    public ValueTask<IResult> OnGetScenePointReq(SceneManager sceneManager, Player player)
+    {
+        GetScenePointRsp rsp = new()
+        {
+            SceneId = sceneManager.CurrentSceneId,
+            BelongUid = player.Uid
+        };
+
+        for (uint i = 1; i <= 777; i++)
+        {
+            rsp.UnlockedPointList.Add(i);
+        }
+
+        return ValueTask.FromResult(Response(CmdType.GetScenePointRsp, rsp));
+    }
+
+    [NetCommand(CmdType.GetSceneAreaReq)]
+    public ValueTask<IResult> OnGetSceneAreaReq(SceneManager sceneManager)
+    {
+        GetSceneAreaRsp rsp = new()
+        {
+            SceneId = sceneManager.CurrentSceneId
+        };
+
+        for (uint i = 1; i <= 20; i++)
+        {
+            rsp.AreaIdList.Add(i);
+        }
+
+        return ValueTask.FromResult(Response(CmdType.GetSceneAreaRsp, rsp));
+    }
 
     [NetCommand(CmdType.PostEnterSceneReq)]
     public async ValueTask<IResult> OnPostEnterSceneReq(SceneManager sceneManager)

@@ -11,6 +11,7 @@ namespace NahidaImpact.Gameserver.Game.Scene;
 internal class SceneManager(NetSession session, Player player, EntityManager entityManager, EntityFactory entityFactory, BinDataCollection binData)
 {
     public uint EnterToken { get; private set; }
+    public uint CurrentSceneId => _sceneId;
 
     private readonly BinDataCollection _binData = binData;
 
