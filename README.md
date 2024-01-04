@@ -1,6 +1,3 @@
----
-<div align="center">
- </div> 
 
 # NahidaImpact
 Server backend reimplementation for Genshin Impact.
