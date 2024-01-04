@@ -7,6 +7,6 @@ internal class EntityFactory
 
     public AvatarEntity CreateAvatar(GameAvatar gameAvatar, uint belongUid)
     {
-        return new(gameAvatar, belongUid, ++_entityIdSeed);
+        return new(gameAvatar, belongUid, ++_entityIdSeed, ++_entityIdSeed);
     }
 }

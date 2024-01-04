@@ -57,7 +57,8 @@ internal class Player(ExcelTableCollection excelTables)
                 WeaponId = avatarExcel.InitialWeapon,
                 BornTime = currentTimestamp,
                 Guid = NextGuid(),
-                WearingFlycloakId = 140001
+                WearingFlycloakId = 140001,
+                WeaponGuid = NextGuid()
             };
 
             avatar.InitDefaultProps(avatarExcel);

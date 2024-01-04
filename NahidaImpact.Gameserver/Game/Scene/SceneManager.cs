@@ -60,13 +60,23 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
             _enterState = SceneEnterState.Complete;
     }
 
+    public async ValueTask ReplaceCurrentAvatarAsync(ulong replaceToGuid)
+    {
+        // TODO: add logic checks.
+
+        AvatarEntity avatar = _teamAvatars.Find(a => a.GameAvatar.Guid == replaceToGuid) 
+            ?? throw new ArgumentException($"ReplaceCurrentAvatar: avatar with guid {replaceToGuid} not in team!");
+
+        await _entityManager.SpawnEntityAsync(avatar, VisionType.Replace);
+    }
+
     public async ValueTask ChangeTeamAvatarsAsync(ulong[] guidList)
     {
         _teamAvatars.Clear();
 
         foreach (ulong guid in guidList)
         {
-            GameAvatar gameAvatar = _player.Avatars.Find(avatar => avatar.Guid == guid)!; // currently only first one
+            GameAvatar gameAvatar = _player.Avatars.Find(avatar => avatar.Guid == guid)!;
 
             AvatarEntity avatarEntity = _entityFactory.CreateAvatar(gameAvatar, _player.Uid);
             avatarEntity.SetPosition(2336.789f, 249.98896f, -751.3081f);
@@ -152,9 +162,9 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
             sceneTeamUpdate.SceneTeamAvatarList.Add(new SceneTeamAvatar
             {
                 SceneEntityInfo = avatar.AsInfo(),
-                WeaponEntityId = SceneController.WeaponEntityId,
+                WeaponEntityId = avatar.WeaponEntityId,
                 PlayerUid = _player.Uid,
-                WeaponGuid = GameAvatar.WeaponGuid,
+                WeaponGuid = avatar.GameAvatar.WeaponGuid,
                 EntityId = avatar.EntityId,
                 AvatarGuid = avatar.GameAvatar.Guid,
                 AbilityControlBlock = avatar.BuildAbilityControlBlock(_binData),
@@ -191,8 +201,8 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
             {
                 AvatarGuid = avatar.GameAvatar.Guid,
                 AvatarEntityId = avatar.EntityId,
-                WeaponEntityId = SceneController.WeaponEntityId,
-                WeaponGuid = GameAvatar.WeaponGuid
+                WeaponEntityId = avatar.WeaponEntityId,
+                WeaponGuid = avatar.GameAvatar.WeaponGuid
             });
         }
 

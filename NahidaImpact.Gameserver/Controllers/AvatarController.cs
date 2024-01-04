@@ -9,6 +9,19 @@ namespace NahidaImpact.Gameserver.Controllers;
 [NetController]
 internal class AvatarController : ControllerBase
 {
+    [NetCommand(CmdType.ChangeAvatarReq)]
+    public async ValueTask<IResult> OnChangeAvatarReq(SceneManager sceneManager)
+    {
+        ChangeAvatarReq request = Packet!.DecodeBody<ChangeAvatarReq>();
+
+        await sceneManager.ReplaceCurrentAvatarAsync(request.Guid);
+
+        return Response(CmdType.ChangeAvatarRsp, new ChangeAvatarRsp
+        {
+            CurGuid = request.Guid
+        });
+    }
+
     [NetCommand(CmdType.SetUpAvatarTeamReq)]
     public async ValueTask<IResult> OnSetUpAvatarTeamReq(NetSession session, SceneManager sceneManager)
     {

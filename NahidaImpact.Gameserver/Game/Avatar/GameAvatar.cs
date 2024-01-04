@@ -5,14 +5,13 @@ using NahidaImpact.Protocol;
 namespace NahidaImpact.Gameserver.Game.Avatar;
 internal class GameAvatar
 {
-    public const ulong WeaponGuid = 2281337;
-
     public ulong Guid { get; set; }
 
     public uint AvatarId { get; set; }
     public uint SkillDepotId { get; set; }
     public uint WearingFlycloakId { get; set; }
     public uint BornTime { get; set; }
+    public ulong WeaponGuid { get; set; }
 
     public uint WeaponId { get; set; } // TODO: Weapon class!
 

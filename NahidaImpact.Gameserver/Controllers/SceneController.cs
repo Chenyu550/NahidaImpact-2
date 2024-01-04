@@ -9,9 +9,6 @@ namespace NahidaImpact.Gameserver.Controllers;
 [NetController]
 internal class SceneController : ControllerBase
 {
-    // TODO: Scene management, Entity management!!!
-    public const uint WeaponEntityId = 100663300;
-
     [NetCommand(CmdType.GetScenePointReq)]
     public ValueTask<IResult> OnGetScenePointReq(SceneManager sceneManager, Player player)
     {
@@ -37,7 +34,7 @@ internal class SceneController : ControllerBase
             SceneId = sceneManager.CurrentSceneId
         };
 
-        for (uint i = 1; i <= 20; i++)
+        for (uint i = 1; i <= 100; i++)
         {
             rsp.AreaIdList.Add(i);
         }

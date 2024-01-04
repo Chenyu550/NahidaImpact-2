@@ -12,11 +12,13 @@ internal class AvatarEntity : SceneEntity
     public override ProtEntityType EntityType => ProtEntityType.Avatar;
 
     public uint Uid { get; }
+    public uint WeaponEntityId { get; }
     public GameAvatar GameAvatar { get; }
 
-    public AvatarEntity(GameAvatar gameAvatar, uint uid, uint entityId) : base(entityId)
+    public AvatarEntity(GameAvatar gameAvatar, uint uid, uint entityId, uint weaponEntityId) : base(entityId)
     {
         Uid = uid;
+        WeaponEntityId = ((uint)ProtEntityType.Weapon << 24) + weaponEntityId; // temporary solution, need real weapon entity object.
         GameAvatar = gameAvatar;
         Properties = gameAvatar.Properties;
         FightProperties = gameAvatar.FightProperties;
@@ -65,7 +67,7 @@ internal class AvatarEntity : SceneEntity
             SkillDepotId = GameAvatar.SkillDepotId,
             Weapon = new SceneWeaponInfo
             {
-                EntityId = SceneController.WeaponEntityId,
+                EntityId = WeaponEntityId,
                 GadgetId = 50000000 + GameAvatar.WeaponId,
                 ItemId = GameAvatar.WeaponId,
                 Guid = GameAvatar.WeaponGuid,
