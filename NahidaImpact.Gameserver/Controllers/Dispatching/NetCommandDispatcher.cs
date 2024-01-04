@@ -7,6 +7,7 @@ using NahidaImpact.Gameserver.Network;
 using NahidaImpact.Protocol;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 namespace NahidaImpact.Gameserver.Controllers.Dispatching;
 internal class NetCommandDispatcher(IServiceProvider serviceProvider, ILogger<NetCommandDispatcher> logger)
@@ -29,7 +30,7 @@ internal class NetCommandDispatcher(IServiceProvider serviceProvider, ILogger<Ne
             return await handler(_serviceProvider, packet);
         }
 
-        _logger.LogWarning("No handler defined for command of type {cmdType}", packet.CmdType);
+        Debug.WriteLine("No handler defined for command of type {0}", packet.CmdType);
         return null;
     }
 

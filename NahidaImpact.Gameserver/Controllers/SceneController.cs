@@ -1,7 +1,10 @@
-﻿using NahidaImpact.Gameserver.Controllers.Attributes;
+﻿using Google.Protobuf;
+using NahidaImpact.Gameserver.Controllers.Attributes;
 using NahidaImpact.Gameserver.Controllers.Result;
 using NahidaImpact.Gameserver.Game;
 using NahidaImpact.Gameserver.Game.Scene;
+using NahidaImpact.Gameserver.Helpers;
+using NahidaImpact.Gameserver.Network.Session;
 using NahidaImpact.Protocol;
 
 namespace NahidaImpact.Gameserver.Controllers;
@@ -9,6 +12,42 @@ namespace NahidaImpact.Gameserver.Controllers;
 [NetController]
 internal class SceneController : ControllerBase
 {
+    [NetCommand(CmdType.EvtDoSkillSuccNotify)]
+    public async ValueTask<IResult> OnEvtDoSkillSuccNotify(SceneManager sceneManager)
+    {
+        EvtDoSkillSuccNotify notify = Packet!.DecodeBody<EvtDoSkillSuccNotify>();
+        await sceneManager.ResetAllCoolDownsForAvatar(notify.CasterId);
+
+        return Ok();
+    }
+
+    [NetCommand(CmdType.CombatInvocationsNotify)]
+    public async ValueTask<IResult> OnCombatInvocationsNotify(ClientActionManager clientActionManager)
+    {
+        CombatInvocationsNotify notify = Packet!.DecodeBody<CombatInvocationsNotify>();
+        foreach (CombatInvokeEntry invocation in notify.InvokeList)
+        {
+            IMessage? message = invocation.DecodeCombatInvocation();
+            if (message != null)
+                await clientActionManager.InvokeAsync(invocation.ArgumentType, message);
+        }
+
+        return Ok();
+    }
+
+    [NetCommand(CmdType.UnionCmdNotify)]
+    public async ValueTask<IResult> OnUnionCmdNotify(NetSession session)
+    {
+        UnionCmdNotify notify = Packet!.DecodeBody<UnionCmdNotify>();
+
+        foreach (UnionCmd cmd in notify.CmdList)
+        {
+            await session.HandlePacket(cmd.ToNetPacket());
+        }
+
+        return Ok();
+    }
+
     [NetCommand(CmdType.GetScenePointReq)]
     public ValueTask<IResult> OnGetScenePointReq(SceneManager sceneManager, Player player)
     {

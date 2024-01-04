@@ -5,6 +5,7 @@ using NahidaImpact.Gameserver.Controllers.Result;
 using NahidaImpact.Protocol;
 using Google.Protobuf;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 namespace NahidaImpact.Gameserver.Network.Session;
 internal abstract class NetSession(ILogger<NetSession> logger, NetSessionManager sessionManager, NetCommandDispatcher commandDispatcher) : IDisposable
@@ -41,6 +42,25 @@ internal abstract class NetSession(ILogger<NetSession> logger, NetSessionManager
         });
     }
 
+    public async ValueTask HandlePacket(NetPacket packet)
+    {
+        IResult? result = await _commandDispatcher.InvokeHandler(packet);
+        if (result != null)
+        {
+            while (result.NextPacket(out NetPacket? serverPacket))
+            {
+                await SendAsync(serverPacket);
+
+                if (serverPacket.CmdType == CmdType.GetPlayerTokenRsp)
+                {
+                    InitializeEncryption(1337); // hardcoded MT seed with patch
+                }
+            }
+
+            Debug.WriteLine("Successfully handled command of type {0}", packet.CmdType);
+        }
+    }
+
     protected async ValueTask<int> ConsumePacketsAsync(Memory<byte> buffer)
     {
         if (buffer.Length < 12)
@@ -55,21 +75,7 @@ internal abstract class NetSession(ILogger<NetSession> logger, NetSessionManager
             if (packet == null)
                 return consumed;
 
-            IResult? result = await _commandDispatcher.InvokeHandler(packet);
-            if (result != null)
-            {
-                while (result.NextPacket(out NetPacket? serverPacket))
-                {
-                    await SendAsync(serverPacket);
-
-                    if (serverPacket.CmdType == CmdType.GetPlayerTokenRsp)
-                    {
-                        InitializeEncryption(1337); // hardcoded MT seed with patch
-                    }
-                }
-
-                _logger.LogInformation("Successfully handled command of type {cmdType}", packet.CmdType);
-            }
+            if (packet != null) await HandlePacket(packet);
         } while (buffer.Length - consumed >= 12);
 
         return consumed;

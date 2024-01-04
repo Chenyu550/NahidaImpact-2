@@ -9,8 +9,8 @@ internal class NetPacket
     private const ushort TailMagic = 0x89AB;
 
     public CmdType CmdType { get; set; }
-    public Memory<byte> Head { get; set; }
-    public Memory<byte> Body { get; set; }
+    public ReadOnlyMemory<byte> Head { get; set; }
+    public ReadOnlyMemory<byte> Body { get; set; }
 
     public TBody DecodeBody<TBody>() where TBody : IMessage<TBody>, new()
     {

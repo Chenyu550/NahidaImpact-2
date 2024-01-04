@@ -15,6 +15,8 @@ internal class Player(ExcelTableCollection excelTables)
     public List<GameAvatarTeam> AvatarTeams { get; set; } = [];
     public uint CurTeamIndex { get; set; }
 
+    public uint CurAvatarEntityId { get; set; }
+
     private readonly ExcelTableCollection _excelTables = excelTables;
 
     public void InitDefaultPlayer()

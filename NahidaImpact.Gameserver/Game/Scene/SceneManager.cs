@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using NahidaImpact.Common.Constants;
 using NahidaImpact.Common.Data.Binout;
 using NahidaImpact.Gameserver.Controllers;
 using NahidaImpact.Gameserver.Game.Avatar;
@@ -60,13 +61,35 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
             _enterState = SceneEnterState.Complete;
     }
 
+    public async ValueTask ResetAllCoolDownsForAvatar(uint entityId)
+    {
+        await _entityManager.ChangeAvatarFightPropAsync(entityId, FightProp.FIGHT_PROP_NONEXTRA_SKILL_CD_MINUS_RATIO, 1);
+        await _entityManager.ChangeAvatarFightPropAsync(entityId, FightProp.FIGHT_PROP_SKILL_CD_MINUS_RATIO, 1);
+    }
+
+    public ValueTask MotionChanged(uint entityId, MotionInfo motion)
+    {
+        SceneEntity? entity = _entityManager.GetEntityById(entityId);
+        if (entity == null) return ValueTask.CompletedTask;
+
+        entity.MotionInfo = motion;
+        // need to notify peers, but it's single player anyway (for now)
+
+        return ValueTask.CompletedTask;
+    }
+
     public async ValueTask ReplaceCurrentAvatarAsync(ulong replaceToGuid)
     {
         // TODO: add logic checks.
 
+        SceneEntity previousEntity = _entityManager.GetEntityById(_player.CurAvatarEntityId)!;
+
         AvatarEntity avatar = _teamAvatars.Find(a => a.GameAvatar.Guid == replaceToGuid) 
             ?? throw new ArgumentException($"ReplaceCurrentAvatar: avatar with guid {replaceToGuid} not in team!");
 
+        avatar.MotionInfo = previousEntity.MotionInfo; // maybe make a better way to do this?
+
+        _player.CurAvatarEntityId = avatar.EntityId;
         await _entityManager.SpawnEntityAsync(avatar, VisionType.Replace);
     }
 
@@ -74,22 +97,28 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
     {
         _teamAvatars.Clear();
 
+        SceneEntity previousEntity = _entityManager.GetEntityById(_player.CurAvatarEntityId)!;
+        Vector pos = previousEntity.MotionInfo.Pos;
+
         foreach (ulong guid in guidList)
         {
             GameAvatar gameAvatar = _player.Avatars.Find(avatar => avatar.Guid == guid)!;
 
             AvatarEntity avatarEntity = _entityFactory.CreateAvatar(gameAvatar, _player.Uid);
-            avatarEntity.SetPosition(2336.789f, 249.98896f, -751.3081f);
+            avatarEntity.SetPosition(pos.X, pos.Y, pos.Z);
 
             _teamAvatars.Add(avatarEntity);
         }
 
         await SendSceneTeamUpdate();
+
+        _player.CurAvatarEntityId = _teamAvatars[0].EntityId;
         await _entityManager.SpawnEntityAsync(_teamAvatars[0], VisionType.Born);
     }
 
     private async ValueTask OnEnterDone()
     {
+        _player.CurAvatarEntityId = _teamAvatars[0].EntityId;
         await _entityManager.SpawnEntityAsync(_teamAvatars[0], VisionType.Born);
     }
 

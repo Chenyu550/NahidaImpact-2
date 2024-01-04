@@ -33,6 +33,18 @@ internal abstract class SceneEntity
         MotionInfo.Rot.Z = z;
     }
 
+    public void SetFightProp(uint key, float value)
+    {
+        FightPropPair? pair = FightProperties.Find(p => p.PropType == key);
+        if (pair == null)
+        {
+            pair = new() { PropType = key };
+            FightProperties.Add(pair);
+        }
+
+        pair.PropValue = value;
+    }
+
     public virtual SceneEntityInfo AsInfo()
     {
         SceneEntityInfo info = new()

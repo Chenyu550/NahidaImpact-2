@@ -39,6 +39,7 @@ builder.Services.AddScoped<Player>();
 builder.Services.AddScoped<SceneManager>();
 builder.Services.AddScoped<EntityManager>();
 builder.Services.AddScoped<EntityFactory>();
+builder.Services.AddScoped<ClientActionManager>();
 
 // Logic Listeners
 builder.Services.AddScoped<IEntityEventListener, SessionEntityEventListener>();

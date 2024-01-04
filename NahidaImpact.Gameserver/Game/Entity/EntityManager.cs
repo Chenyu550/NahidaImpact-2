@@ -13,6 +13,18 @@ internal class EntityManager(IEntityEventListener listener)
         await _listener.OnEntitySpawned(entity, visionType);
     }
 
+    public async ValueTask ChangeAvatarFightPropAsync(uint entityId, uint key, float value)
+    {
+        if (GetEntityById(entityId) is AvatarEntity entity)
+        {
+            entity.SetFightProp(key, value);
+            await _listener.OnAvatarFightPropChanged(entity, key, value);
+        }
+    }
+
+    public SceneEntity? GetEntityById(uint id) => 
+        _entities.Find(entity => entity.EntityId == id);
+
     public void Reset()
     {
         _entities.Clear();
