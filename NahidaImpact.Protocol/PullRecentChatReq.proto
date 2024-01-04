@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// CmdId: 23337
+// Obf: DLAJEHFIMNF
+message PullRecentChatReq {
+	uint32 pull_num = 7;
+	uint32 begin_sequence = 14;
+}

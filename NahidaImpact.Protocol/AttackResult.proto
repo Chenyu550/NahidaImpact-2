@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "HitCollision.proto";
+message AttackResult {
+  Vector resolved_dir = 4;
+  HitCollision hit_collision = 1;
+  float damage = 13;
+  float damage_shield = 1422; //sus
+  uint32 element_type = 255;
+  uint32 attacker_id = 6;
+  uint32 defense_id = 11;
+}

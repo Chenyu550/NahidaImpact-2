@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 23683
+// Obf: DBLNBBNCINO
+message ChangeWorldToSingleModeReq {
+}

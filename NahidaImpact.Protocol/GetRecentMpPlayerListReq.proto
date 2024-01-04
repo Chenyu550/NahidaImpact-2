@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 9833
+// Obf: MLIHDMMOIJO
+message GetRecentMpPlayerListReq {
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 5710
+// Obf: JJKIDLCAPLA
+message DoSetPlayerBornDataNotify {
+}

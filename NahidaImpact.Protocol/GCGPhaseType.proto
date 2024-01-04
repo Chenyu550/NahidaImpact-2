@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// Obf: NNHMLKCECBP
+enum GCGPhaseType {
+	OFOHJIEDJKD_GcgPhaseInvalid = 0;
+	OFOHJIEDJKD_GcgPhaseStart = 1;
+	OFOHJIEDJKD_GcgPhaseDraw = 2;
+	OFOHJIEDJKD_GcgPhaseOnStage = 3;
+	OFOHJIEDJKD_GcgPhaseDice = 4;
+	OFOHJIEDJKD_GcgPhaseMain = 5;
+	OFOHJIEDJKD_GcgPhaseEnd = 6;
+	OFOHJIEDJKD_GcgPhaseDie = 7;
+	OFOHJIEDJKD_GcgPhaseFin = 8;
+	OFOHJIEDJKD_GcgPhasePreMain = 9;
+	OFOHJIEDJKD_GcgPhaseReroll = 10;
+	OFOHJIEDJKD_GcgPhaseRedraw = 11;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 6397
+// Obf: HPLLPIMMLLJ
+message WinterCampAcceptAllGiveItemReq {
+}

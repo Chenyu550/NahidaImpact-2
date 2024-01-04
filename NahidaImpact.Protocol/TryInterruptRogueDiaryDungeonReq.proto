@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 23223
+// Obf: FKGINDOIJFP
+message TryInterruptRogueDiaryDungeonReq {
+}

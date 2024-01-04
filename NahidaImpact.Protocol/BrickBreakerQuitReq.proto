@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 2184
+// Obf: FAGOMNKEJHG
+message BrickBreakerQuitReq {
+}

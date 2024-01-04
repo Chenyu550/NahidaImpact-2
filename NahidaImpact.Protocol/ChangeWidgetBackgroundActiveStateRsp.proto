@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+
+message ChangeWidgetBackgroundActiveStateRsp {
+	int32 retcode = 9;
+	uint32 material_id = 8;
+}

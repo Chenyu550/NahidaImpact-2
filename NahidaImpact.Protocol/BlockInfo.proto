@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message BlockInfo {
+  bytes bin_data = 3;
+  uint32 data_version = 2;
+  uint32 block_id = 1;
+  bool is_dirty = 4;
+}

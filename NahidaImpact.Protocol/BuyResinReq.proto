@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 9368
+// Obf: CJKAMIJPOHL
+message BuyResinReq {
+}

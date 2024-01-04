@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 4771
+// Obf: ENEFGMFFKJI
+message EndCameraSceneLookNotify {
+}

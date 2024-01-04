@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 181
+// Obf: ICLGLDGHDGP
+message GetGachaInfoReq {
+}

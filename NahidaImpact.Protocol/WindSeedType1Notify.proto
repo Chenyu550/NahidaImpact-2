@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message WindSeedType1Notify {
+	uint32 config_id = 10;
+	bytes payload = 3;
+}

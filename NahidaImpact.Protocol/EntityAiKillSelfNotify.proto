@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 2606
+// Obf: FPIKKIKFHDA
+message EntityAiKillSelfNotify {
+	uint32 entity_id = 6;
+}

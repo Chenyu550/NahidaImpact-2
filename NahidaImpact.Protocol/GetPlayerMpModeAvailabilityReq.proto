@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 26251
+// Obf: IEIHGELBNKF
+message GetPlayerMpModeAvailabilityReq {
+}

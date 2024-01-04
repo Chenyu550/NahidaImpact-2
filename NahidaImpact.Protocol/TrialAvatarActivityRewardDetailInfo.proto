@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+// Obf: PPLODNCPDAI
+message TrialAvatarActivityRewardDetailInfo {
+	uint32 reward_id = 10;
+	bool HOMJOOPMEKC = 13;
+	bool MOJAMAJMDDM = 15;
+	uint32 trial_avatar_index_id = 6;
+}

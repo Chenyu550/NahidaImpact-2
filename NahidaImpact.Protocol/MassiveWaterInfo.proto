@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// Obf: CGABDBLBBGF
+message MassiveWaterInfo {
+	int64 id = 1;
+}

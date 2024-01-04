@@ -1,0 +1,129 @@
+{
+  "abilities": [
+    {
+      "abilityID": "Avatar_Liuyun_ExtraAttack",
+      "abilityName": "Avatar_Liuyun_ExtraAttack",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ExtraAttack_Bullet",
+      "abilityName": "Avatar_Liuyun_ExtraAttack_Bullet",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Attack01",
+      "abilityName": "Avatar_Liuyun_Attack01",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_NormalAttack_Bullet_01",
+      "abilityName": "Avatar_Liuyun_NormalAttack_Bullet_01",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Attack02",
+      "abilityName": "Avatar_Liuyun_Attack02",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_NormalAttack_Bullet_02",
+      "abilityName": "Avatar_Liuyun_NormalAttack_Bullet_02",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Attack03",
+      "abilityName": "Avatar_Liuyun_Attack03",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_NormalAttack_Bullet_03",
+      "abilityName": "Avatar_Liuyun_NormalAttack_Bullet_03",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Attack04",
+      "abilityName": "Avatar_Liuyun_Attack04",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_NormalAttack_Bullet_04",
+      "abilityName": "Avatar_Liuyun_NormalAttack_Bullet_04",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ElementalArt",
+      "abilityName": "Avatar_Liuyun_ElementalArt",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ElementalArt_CameraControl",
+      "abilityName": "Avatar_Liuyun_ElementalArt_CameraControl",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Liuyun_ElementalArt_Move_Collider",
+      "abilityName": "Liuyun_ElementalArt_Move_Collider",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ElementalArt_ExtraFallingAttack",
+      "abilityName": "Avatar_Liuyun_ElementalArt_ExtraFallingAttack",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Liuyun_ElementalArt_Crane_Collider",
+      "abilityName": "Liuyun_ElementalArt_Crane_Collider",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ElementBurst",
+      "abilityName": "Avatar_Liuyun_ElementBurst",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ElementBurst_Drone",
+      "abilityName": "Avatar_Liuyun_ElementBurst_Drone",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_ElementBurst_HealHandler",
+      "abilityName": "Avatar_Liuyun_ElementBurst_HealHandler",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_FallingAnthem",
+      "abilityName": "Avatar_Liuyun_FallingAnthem",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_PermanentSkill_1",
+      "abilityName": "Avatar_Liuyun_PermanentSkill_1",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Liuyun_ElementalArt_WindHole",
+      "abilityName": "Liuyun_ElementalArt_WindHole",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Constellation_2",
+      "abilityName": "Avatar_Liuyun_Constellation_2",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Constellation_4",
+      "abilityName": "Avatar_Liuyun_Constellation_4",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_Constellation_6",
+      "abilityName": "Avatar_Liuyun_Constellation_6",
+      "abilityOverride": ""
+    },
+    {
+      "abilityID": "Avatar_Liuyun_PermanentSkill_3",
+      "abilityName": "Avatar_Liuyun_PermanentSkill_3",
+      "abilityOverride": ""
+    }
+  ]
+}

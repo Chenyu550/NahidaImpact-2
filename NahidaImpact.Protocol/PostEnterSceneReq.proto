@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message PostEnterSceneReq {
+  // CMD_ID = 9304
+  uint32 enter_scene_token = 10;
+}

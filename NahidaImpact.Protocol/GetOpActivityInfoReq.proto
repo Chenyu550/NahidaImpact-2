@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 25823
+// Obf: FGMBOCEJFKB
+message GetOpActivityInfoReq {
+}

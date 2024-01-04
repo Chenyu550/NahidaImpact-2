@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 28864
+// Obf: CCOAMGKAFMI
+message ReunionSettleNotify {
+}

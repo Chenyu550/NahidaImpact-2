@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 26440
+// Obf: LMCOJFIFJBF
+message LanternRiteTakeSkinRewardReq {
+}

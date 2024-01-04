@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 23396
+// Obf: FKEGCNDKLJN
+message HomeLimitedShopInfoReq {
+}

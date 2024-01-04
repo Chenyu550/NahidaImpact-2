@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 24599
+// Obf: EOODHGFCINK
+message GetNextResourceInfoReq {
+}

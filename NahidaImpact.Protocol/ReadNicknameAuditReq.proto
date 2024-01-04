@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 8131
+// Obf: APEFFPOJEKC
+message ReadNicknameAuditReq {
+}

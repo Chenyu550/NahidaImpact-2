@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message PingRsp {
+  // CMD_ID = 20939
+  int32 retcode = 1;
+}

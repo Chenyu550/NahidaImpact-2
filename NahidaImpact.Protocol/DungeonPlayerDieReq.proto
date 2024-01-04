@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "PlayerDieType.proto";
+// CmdId: 3239
+// Obf: KLKMLEAJHNH
+message DungeonPlayerDieReq {
+	PlayerDieType die_type = 15;
+	uint32 dungeon_id = 1;
+}

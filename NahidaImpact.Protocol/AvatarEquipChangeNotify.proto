@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "SceneWeaponInfo.proto";
+import "SceneReliquaryInfo.proto";
+// CmdId: 20682
+// Obf: GOMNKIGKPAH
+message AvatarEquipChangeNotify {
+	SceneWeaponInfo weapon = 15;
+	SceneReliquaryInfo reliquary = 7;
+	uint64 equip_guid = 9;
+	uint32 equip_type = 3;
+	uint32 item_id = 1;
+	uint64 avatar_guid = 11;
+}

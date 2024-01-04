@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 465
+// Obf: KNFAPFPMPNF
+message PotionRestartDungeonReq {
+}

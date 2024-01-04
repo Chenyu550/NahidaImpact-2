@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+message GetPlayerTokenReq {
+// CmdId: 27208
+  uint32 OAALCMDDLEH = 1201;
+  string account_uid = 1;
+  string account_token = 6;
+  string AGPBMJALCLH = 11;
+  string birthday = 969;
+  string country_code = 7;
+  string KPDLIHKCKEC = 14;
+  string online_id = 15;
+  string client_rand_key = 273;
+  string AJDCDFOGMKM = 69;
+  string psn_id = 4;
+  string PKDJNIBNDCK = 3;
+  uint32 account_type = 10;
+  uint32 CJMBIOCBEAD = 8;
+  uint32 key_id = 1353;
+  uint32 platform_type = 5;
+  uint32 uid = 2;
+  uint32 channel_id = 12;
+  uint32 HANDAGLHBKL = 13;
+  uint32 JMJFADOIBLD = 808;
+  bool is_guest = 9;
+}

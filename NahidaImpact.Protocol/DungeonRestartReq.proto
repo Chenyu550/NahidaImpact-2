@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 29252
+// Obf: FFNEOOIKHIA
+message DungeonRestartReq {
+}

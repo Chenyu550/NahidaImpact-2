@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 23043
+// Obf: JFIJMPLBGPL
+message ExitCustomDungeonTryReq {
+}

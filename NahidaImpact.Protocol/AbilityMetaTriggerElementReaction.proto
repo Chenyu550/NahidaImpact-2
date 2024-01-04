@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message AbilityMetaTriggerElementReaction {
+  int32 hit_index = 5;
+  uint32 element_reaction_type = 11;
+  uint32 trigger_entity_id = 7;
+}

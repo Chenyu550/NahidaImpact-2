@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 5151
+// Obf: LDABDLLOMKP
+message FurnitureMakeFinishNotify {
+}

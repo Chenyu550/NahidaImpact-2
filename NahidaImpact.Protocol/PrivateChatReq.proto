@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+message PrivateChatReq {
+    uint32 target_uid = 12;
+    oneof content {
+          string text = 1;
+          uint32 icon = 4;
+      }
+  }

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+
+import "SceneEntityInfo.proto";
+import "VisionType.proto";
+
+message SceneEntityAppearNotify {
+  // CMD_ID = 21994
+  repeated SceneEntityInfo entity_list = 4;
+  uint32 param = 8;
+  VisionType appear_type = 11;
+}

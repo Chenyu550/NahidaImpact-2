@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 8574
+// Obf: ALOIGODPJPJ
+message RestartEffigyChallengeReq {
+}

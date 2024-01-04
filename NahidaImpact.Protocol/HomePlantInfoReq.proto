@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 7267
+// Obf: CLGIKAPCPMO
+message HomePlantInfoReq {
+}

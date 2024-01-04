@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 20474
+// Obf: JBIEBFNCMLG
+message DuelHeartRestartDungeonReq {
+}

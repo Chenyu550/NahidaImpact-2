@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 27778
+// Obf: DLBMDKGFBOI
+message HomeSceneInitFinishReq {
+}

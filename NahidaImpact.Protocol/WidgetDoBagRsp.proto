@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message WidgetDoBagRsp {
+	uint32 material_id = 2;
+	int32 retcode = 15;
+}

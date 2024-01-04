@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message SetNameCardRsp {
+	uint32 name_card_id = 1;
+	int32 retcode = 14;
+}

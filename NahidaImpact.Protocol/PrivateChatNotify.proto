@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+
+
+import "ChatInfo.proto";
+// CmdId: 4952
+message PrivateChatNotify {
+	ChatInfo chat_info = 9;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message SetNameCardReq {
+	uint32 name_card_id = 12;
+}

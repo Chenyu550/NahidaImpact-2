@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+
+
+message ChatInfo {
+	message SystemHint {
+		uint32 type = 9;
+	}
+	
+	uint32 time = 7;
+	uint32 to_uid = 6;
+	bool is_read = 4;
+	uint32 uid = 5;
+	uint32 sequence = 12;
+	oneof content {
+		string text = 408;
+		uint32 icon = 1308;
+		SystemHint system_hint = 166;
+	}
+}

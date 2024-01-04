@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 20911
+// Obf: FHMJCIOJAEA
+message FungusFighterRestartTraningDungeonReq {
+}

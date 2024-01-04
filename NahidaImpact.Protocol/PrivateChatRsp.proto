@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message PrivateChatRsp {
+    int32 retcode = 3;
+    uint32 chat_forbidden_endtime = 5;
+}

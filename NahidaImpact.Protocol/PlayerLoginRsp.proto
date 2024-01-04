@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+
+import "BlockInfo.proto";
+import "ResVersionConfig.proto";
+import "StopServerInfo.proto";
+import "ShortAbilityHashPair.proto";
+import "FeatureBlockInfo.proto";
+
+message PlayerLoginRsp {
+  // CMD_ID = 9913
+  map<string, int32> ability_hash_map = 3;
+  string client_silence_version_suffix = 477;
+  map<uint32, BlockInfo> block_info_map = 1662;
+  string client_version_suffix = 1953;
+  string birthday = 964;
+  string country_code = 974;
+  string game_biz = 8;
+  string EJOIOKOFNFA = 924;
+  string JIMFJPFJKFF = 1938;
+  string ADJCHKHHDLF = 1097;
+  ResVersionConfig next_res_version_config = 1996;
+  StopServerInfo DFFMGGODIII = 2005;
+  repeated ShortAbilityHashPair short_ability_hash_map = 843;
+  bytes sc_info = 1468; //もう一つのProtoではplayer_dataとsc_infoが逆
+  ResVersionConfig res_version_config = 424;
+  string next_resource_url = 1795;
+  bytes player_data = 11; //もう一つのProtoではplayer_dataとsc_infoが逆
+  repeated FeatureBlockInfo feature_block_info_list = 1359;
+  string msg = 456;
+  bool BMHJNKFAAKL = 9;
+	bool OCPPNCCIPBI = 14;
+  bool FMBFGEAPJGE = 4;
+  bool is_data_need_relogin = 1239;
+  bool is_transfer = 1884;
+  bool PCEDOAMCGKK = 2010;
+  bool GHCLMKADGBH = 1962;
+  uint32 player_data_version = 13;
+  uint32 client_data_version = 5;
+  int32 retcode = 1;
+  double total_tick_time = 1954;
+  uint32 client_silence_data_version = 12;
+  int32 ability_hash_code = 2;
+  uint64 login_rand = 15;
+  uint32 target_uid = 7;
+  bool is_audit = 674;
+  bool IsUseAbilityHash = 385;
+  uint32 target_home_owner_uid = 401;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 2811
+// Obf: OHOJDOFPJHI
+message HomeGetBlueprintSlotInfoReq {
+}

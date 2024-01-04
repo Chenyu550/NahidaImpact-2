@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 2030
+// Obf: BHEPKPEBEGB
+message GetRegionSearchReq {
+}

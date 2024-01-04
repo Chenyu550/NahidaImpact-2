@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 2639
+// Obf: CLFPPNDBGLJ
+message WorldPlayerReviveReq {
+}

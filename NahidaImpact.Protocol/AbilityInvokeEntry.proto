@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "AbilityInvokeArgument.proto";
+import "AbilityInvokeEntryHead.proto";
+import "ForwardType.proto";
+message AbilityInvokeEntry {
+	uint32 entity_id = 9;
+  bytes ability_data = 1;
+  AbilityInvokeEntryHead head = 4;
+  ForwardType forward_type = 13;
+  AbilityInvokeArgument argument_type = 15;
+}

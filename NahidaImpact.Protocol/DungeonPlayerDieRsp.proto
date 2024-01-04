@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 29888
+// Obf: OAJOHKDAIJF
+message DungeonPlayerDieRsp {
+	int32 retcode = 14;
+}

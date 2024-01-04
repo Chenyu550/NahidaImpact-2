@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// CmdId: 824
+// Obf: LNDKKJJEFBJ
+message AvatarWearFlycloakReq {
+	uint32 flycloak_id = 10;
+	uint64 avatar_guid = 12;
+}

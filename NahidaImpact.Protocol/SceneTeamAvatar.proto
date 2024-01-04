@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+import "AbilitySyncStateInfo.proto";
+import "SceneAvatarInfo.proto";
+import "AbilityControlBlock.proto";
+import "ServerBuff.proto";
+import "AvatarInfo.proto";
+import "SceneEntityInfo.proto";
+
+message SceneTeamAvatar {
+  SceneAvatarInfo scene_avatar_info = 3;
+  AbilityControlBlock ability_control_block = 6;
+  repeated ServerBuff server_buff_list = 9;
+  SceneEntityInfo scene_entity_info = 13;
+  AvatarInfo avatar_info = 7;
+  uint32 entity_id = 4;
+  uint32 weapon_entity_id = 2;
+  uint64 avatar_guid = 14;
+  uint64 weapon_guid = 1;
+  uint32 scene_id = 5;
+  uint32 player_uid = 8;
+}

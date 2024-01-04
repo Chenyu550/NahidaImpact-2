@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+
+import "Vector.proto";
+
+
+message ChangeAvatarReq {
+  Vector move_pos = 1;
+  bool is_move = 5;
+  uint64 guid = 8;
+}

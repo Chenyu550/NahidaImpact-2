@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "Vector.proto";
+// CmdId: 26356
+// Obf: ABACJEJFCJJ
+message EvtAvatarLockChairRsp {
+	uint64 chair_id = 5;
+	Vector position = 9;
+	int32 retcode = 14;
+	uint32 entity_id = 10;
+	int32 direction = 13;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "Vector.proto";
+// Obf: AJIIAKCDDHA
+message AbilityBornType {
+	Vector move_dir = 8;
+	Vector rot = 13;
+	Vector pos = 10;
+}

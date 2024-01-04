@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 27734
+// Obf: IEPBGIKMJFE
+message HomeGetBasicInfoReq {
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "Vector.proto";
+message AbilityActionGenerateElemBall {
+  Vector pos = 11;
+  Vector rot = 7;
+}

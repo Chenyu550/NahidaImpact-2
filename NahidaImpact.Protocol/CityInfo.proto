@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// Obf: ADHJGFHHPLP
+message CityInfo {
+	uint32 city_id = 3;
+	uint32 level = 9;
+	uint32 crystal_num = 10;
+}

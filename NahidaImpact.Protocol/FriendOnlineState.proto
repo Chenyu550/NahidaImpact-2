@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+
+
+enum FriendOnlineState {
+	FriendOnlineState_FreiendDisconnect = 0;
+	FriendOnlineState_FriendOnline = 1;
+}

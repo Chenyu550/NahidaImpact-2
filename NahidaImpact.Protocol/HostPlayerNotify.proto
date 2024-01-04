@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// CmdId: 26380
+// Obf: FKFBKAKPCPA
+message HostPlayerNotify {
+	uint32 host_uid = 13;
+	uint32 HostPeerId = 15;
+}

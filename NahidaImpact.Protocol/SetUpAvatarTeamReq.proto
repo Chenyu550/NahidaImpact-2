@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message SetUpAvatarTeamReq {
+  uint32 team_id = 4;
+  repeated uint64 avatar_team_guid_list = 11;
+  uint64 cur_avatar_guid = 15;
+}

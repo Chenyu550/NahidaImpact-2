@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "Vector.proto";
+message EvtFaceToDirInfo {
+    Vector face_dir = 3;
+    uint32 entity_id = 14;
+}

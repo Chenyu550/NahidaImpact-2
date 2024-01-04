@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 4149
+// Obf: NCEKAKPOPHC
+message HomeEnterEditModeFinishReq {
+}

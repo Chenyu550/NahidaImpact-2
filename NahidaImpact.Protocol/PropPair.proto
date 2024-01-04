@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+import "PropValue.proto";
+
+message PropPair {
+  PropValue prop_value = 2;
+  uint32 type = 1;
+}

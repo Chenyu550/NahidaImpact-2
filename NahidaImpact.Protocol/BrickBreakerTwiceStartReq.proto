@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 7000
+// Obf: EBCGDCALGJI
+message BrickBreakerTwiceStartReq {
+}

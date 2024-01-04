@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+// CmdId: 8572
+// Obf: CPNEKEDGLHM
+message SetUpAvatarTeamRsp {
+	uint32 team_id = 11;
+	uint64 cur_avatar_guid =5;
+	repeated uint64 avatar_team_guid_list = 10;
+	int32 retcode = 4;
+}

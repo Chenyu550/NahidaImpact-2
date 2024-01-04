@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 25877
+// Obf: PPPFPCKCCIG
+message GetPlayerSocialDetailReq {
+	uint32 uid = 11;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 26360
+// Obf: EDKOBFIEMAG
+message ChannellerSlabOneOffDungeonInfoReq {
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+
+import "AbilityString.proto";
+
+message AbilityMetaUpdateBaseReactionDamage {
+  uint32 reaction_type = 13;
+  AbilityString global_value_key = 12; //12 or 1
+  AbilityString ability_name = 1;
+  uint32 source_caster_id = 4;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+
+message PersonalSceneJumpReq {
+	uint32 point_id = 2;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 25601
+// Obf: JNBMOBCMHKK
+message GCGInitFinishReq {
+}

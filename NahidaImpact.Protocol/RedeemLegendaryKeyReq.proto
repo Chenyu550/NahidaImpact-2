@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 8427
+// Obf: EMAMJFBPOLE
+message RedeemLegendaryKeyReq {
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 619
+// Obf: OOIKACKGACB
+message TryEnterNextRogueDiaryDungeonReq {
+}

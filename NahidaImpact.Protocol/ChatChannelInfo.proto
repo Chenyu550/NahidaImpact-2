@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// Obf: KDHDHJBABKP
+message ChatChannelInfo {
+	uint32 channel_id = 6;
+	bool is_shield = 9;
+}

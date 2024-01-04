@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 440
+// Obf: HLHLMLGPCIE
+message GearActivityStartPlayPictureReq {
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Vector.proto";
+// CmdId: 373
+// Obf: JGGAHIIMHDF
+message PerformOperationNotify {
+	// Obf: NMEKLIBHDMO
+	enum OperateType {
+		OPERATE_TYPE_NONE = 0;
+		OPERATE_TYPE_EFFECT = 1;
+	}
+	
+	Vector pos = 12;
+	Vector rot = 3;
+	uint32 index = 8;
+	uint32 entity_id = 7;
+	OperateType operate_type = 5;
+}

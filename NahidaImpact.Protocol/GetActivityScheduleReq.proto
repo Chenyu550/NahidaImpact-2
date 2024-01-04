@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 885
+// Obf: AFFEMCHGKFN
+message GetActivityScheduleReq {
+}

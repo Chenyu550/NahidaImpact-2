@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 4445
+// Obf: EFPLHMCHFDJ
+message GetMapMarkTipsReq {
+}

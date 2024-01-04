@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message WidgetDoBagReq {
+  uint32 material_id = 5;
+}

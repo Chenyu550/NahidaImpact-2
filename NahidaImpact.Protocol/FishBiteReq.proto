@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 3118
+// Obf: ABBFKLGIAJG
+message FishBiteReq {
+}

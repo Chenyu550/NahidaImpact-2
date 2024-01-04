@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 27695
+// Obf: DGCCDLAPKBE
+message CloseCommonTipsNotify {
+}

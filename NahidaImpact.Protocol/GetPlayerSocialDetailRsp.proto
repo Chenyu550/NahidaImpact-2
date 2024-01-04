@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "SocialDetail.proto";
+// CmdId: 21823
+// Obf: CFKGBOLEJCB
+message GetPlayerSocialDetailRsp {
+	SocialDetail detail_data = 4;
+	int32 retcode = 3;
+}

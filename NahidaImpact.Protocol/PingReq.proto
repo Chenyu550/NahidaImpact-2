@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message PingReq {
+  // CMD_ID = 549
+  bytes sc_data = 5;
+  double total_tick_time = 1;
+  float ue_time = 14;
+}

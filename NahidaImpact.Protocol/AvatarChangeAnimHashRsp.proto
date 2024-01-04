@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+
+message AvatarChangeAnimHashRsp {
+	int32 retcode = 14;
+	uint32 anim_hash = 4;
+	uint64 avatar_guid = 15;
+}

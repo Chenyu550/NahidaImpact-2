@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// Obf: KENCCPDLDJG
+enum GalleryStartSource {
+	GALLERY_START_BY_NONE = 0;
+	GALLERY_START_BY_MATCH = 1;
+	GALLERY_START_BY_DRAFT = 2;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+
+
+message ChangeWidgetBackgroundActiveStateReq {
+	bool is_active = 1;
+	uint32 material_id = 15;
+}

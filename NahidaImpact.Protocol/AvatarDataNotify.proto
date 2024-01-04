@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+
+import "AvatarTeam.proto";
+import "AvatarInfo.proto";
+import "AvatarRenameInfo.proto";
+
+// CMD_ID = 24251
+message AvatarDataNotify {
+  repeated uint32 owned_costume_list = 15;
+  repeated uint32 backup_avatar_team_order_list = 10;
+  map<uint32, AvatarTeam> avatar_team_map = 1;
+  repeated AvatarInfo avatar_list = 9;
+  repeated AvatarRenameInfo avatar_rename_list = 11;
+  repeated uint64 temp_avatar_guid_list = 4;
+  uint32 cur_avatar_team_id = 3;
+  uint64 choose_avatar_guid = 12;
+  repeated uint32 owned_flycloak_list = 5;
+}

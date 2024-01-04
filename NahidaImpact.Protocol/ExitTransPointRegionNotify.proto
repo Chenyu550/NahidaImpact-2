@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// CmdId: 2696
+// Obf: BBGPGHPCHGN
+message ExitTransPointRegionNotify {
+	uint32 point_id = 7;
+	uint32 scene_id = 6;
+}

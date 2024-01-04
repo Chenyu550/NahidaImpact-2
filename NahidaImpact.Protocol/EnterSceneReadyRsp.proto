@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message EnterSceneReadyRsp {
+  // CMD_ID = 28859
+  uint32 enter_scene_token = 13;
+  int32 retcode = 15;
+}

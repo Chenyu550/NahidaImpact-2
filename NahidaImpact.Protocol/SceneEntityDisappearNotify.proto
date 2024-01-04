@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "VisionType.proto";
+// CmdId: 1787
+// Obf: GLPMBMHBAKI
+message SceneEntityDisappearNotify {
+	repeated uint32 entity_list = 12;
+	VisionType disappear_type = 3;
+	uint32 param = 7;
+}

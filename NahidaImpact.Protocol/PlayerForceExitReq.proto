@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 1819
+// Obf: EAJKGNFALHF
+message PlayerForceExitReq {
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 26350
+// Obf: NOKLHPPCPKB
+message PlayerChatCDNotify {
+	uint32 over_time = 15;
+}

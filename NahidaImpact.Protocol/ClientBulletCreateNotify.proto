@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 4966
+// Obf: GPOBOMCCOMK
+message ClientBulletCreateNotify {
+	uint32 param = 9;
+}

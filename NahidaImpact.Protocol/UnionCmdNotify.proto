@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+import "UnionCmd.proto";
+message UnionCmdNotify {
+	repeated UnionCmd cmd_list = 8;
+}

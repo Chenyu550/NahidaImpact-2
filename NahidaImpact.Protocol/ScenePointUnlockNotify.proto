@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+// CmdId: 5431
+// Obf: CBIBGAOCEHP
+message ScenePointUnlockNotify {
+    repeated uint32 point_list = 7;
+    repeated uint32 LLLMNLAJJCO = 15;
+    repeated uint32 GBLBKADHGDM = 4;
+    repeated uint32 HJEKKPGBJBM = 12;
+    uint32 scene_id = 13;
+}

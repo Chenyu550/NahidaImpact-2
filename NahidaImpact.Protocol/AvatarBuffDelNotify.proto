@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// CmdId: 3202
+// Obf: HPKFFICFAKP
+message AvatarBuffDelNotify {
+	uint32 buff_id = 5;
+	uint64 avatar_guid = 10;
+}

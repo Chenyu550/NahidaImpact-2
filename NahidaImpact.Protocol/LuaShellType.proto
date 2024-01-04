@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+// Obf: CILPGEMKHFH
+enum LuaShellType {
+	LUASHELL_NONE = 0;
+	LUASHELL_NORMAL = 1;
+	LUASHELL_SECURITY = 2;
+	LUASHELL_SHELL_CODE = 3;
+}

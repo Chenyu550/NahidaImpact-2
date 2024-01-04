@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+import "AbilitySyncStateInfo.proto";
+
+message MPLevelEntityInfo {
+  AbilitySyncStateInfo ability_info = 11;
+  uint32 authority_peer_id = 12;
+  uint32 entity_id = 2;
+}

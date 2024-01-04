@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+
+message PlayerPropChangeNotify {
+	uint32 prop_type = 11;
+	uint32 prop_delta = 7;
+}

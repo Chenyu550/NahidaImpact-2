@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 24297
+// Obf: HECONJKGHHN
+message GachaActivityCreateRobotReq {
+}

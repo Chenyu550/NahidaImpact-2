@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// Obf: EKDNNONAKME
+enum GCGIntentionChangeType {
+	GCG_INTENTION_CHANGE_NONE = 0;
+	GCG_INTENTION_CHANGE_RM = 1;
+}

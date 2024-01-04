@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 9593
+// Obf: LOCJJOEEJMG
+message ReadPrivateChatRsp {
+	int32 retcode = 4;
+}

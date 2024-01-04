@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 8790
+// Obf: OKLHGHMKKHI
+message TreasureMapMpChallengeNotify {
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 1660
+// Obf: HNIAPOCKIMO
+message ReplayCustomDungeonReq {
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "ActivityInfo.proto";
+
+message ActivityInfoNotify {
+	ActivityInfo activity_info = 1;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "WidgetSlotData.proto";
+import "WidgetSlotOp.proto";
+
+message WidgetSlotChangeNotify {
+	WidgetSlotData slot = 3;
+	WidgetSlotOp op = 8;
+}

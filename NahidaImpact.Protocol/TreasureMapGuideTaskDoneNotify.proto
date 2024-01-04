@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 1567
+// Obf: HKPFGBDPCLI
+message TreasureMapGuideTaskDoneNotify {
+}

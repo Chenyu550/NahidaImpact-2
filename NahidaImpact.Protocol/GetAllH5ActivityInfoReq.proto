@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 4793
+// Obf: CFMGENNHKOD
+message GetAllH5ActivityInfoReq {
+}

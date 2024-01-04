@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "ForwardType.proto";
+message EvtDestroyGadgetNotify {
+  ForwardType forward_type = 3;
+  uint32 entity_id = 10;
+}

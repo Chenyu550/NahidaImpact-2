@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 28616
+// Obf: OFNMEJKIHLG
+message CrystalLinkRestartDungeonReq {
+}

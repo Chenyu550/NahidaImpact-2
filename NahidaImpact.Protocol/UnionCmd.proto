@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message UnionCmd {
+  uint32 message_id = 6;
+	bytes body = 5;
+}

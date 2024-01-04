@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 24987
+// Obf: NKLKOJKDGEH
+message TakeReunionFirstGiftRewardReq {
+}

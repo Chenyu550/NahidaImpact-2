@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "ChatInfo.proto";
+// CmdId: 9541
+// Obf: PAHGJBLBNBM
+message PlayerChatNotify {
+	ChatInfo chat_info = 2;
+	uint32 channel_id = 6;
+}

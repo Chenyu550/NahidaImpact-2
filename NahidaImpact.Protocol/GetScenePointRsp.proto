@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+// CmdId: 7133
+// Obf: PMONCPENJMK
+message GetScenePointRsp {
+	repeated uint32 unlocked_point_list = 12;
+	repeated uint32 unhide_point_list = 1;
+	uint32 belong_uid = 13;
+	uint32 scene_id = 3;
+}

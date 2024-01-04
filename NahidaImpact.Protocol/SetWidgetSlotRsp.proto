@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "WidgetSlotTag.proto";
+import "WidgetSlotOp.proto";
+
+message SetWidgetSlotRsp {
+	int32 retcode = 7;
+	repeated WidgetSlotTag tag_list = 5;
+	uint32 material_id = 8;
+	WidgetSlotOp op = 14;
+}

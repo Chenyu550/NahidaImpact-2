@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+
+
+enum FriendEnterHomeOption {
+	FriendEnterHomeOption_NeedConfirm = 0;
+	FriendEnterHomeOption_Refuse = 1;
+	FriendEnterHomeOption_Direct = 2;
+}

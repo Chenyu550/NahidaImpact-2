@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+// CmdId: 28698
+// Obf: GKKPLLOCNMC
+message ServerGlobalValueChangeNotify {
+    float value = 9;
+    uint32 key_hash = 13;
+    uint32 entity_id = 7;
+}

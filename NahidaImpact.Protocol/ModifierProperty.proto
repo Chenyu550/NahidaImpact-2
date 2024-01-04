@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "AbilityString.proto";
+message ModifierProperty {
+  float value = 12;
+  AbilityString key = 2;
+}

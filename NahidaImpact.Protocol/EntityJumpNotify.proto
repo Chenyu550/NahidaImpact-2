@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Vector.proto";
+// CmdId: 8767
+// Obf: KLMLLNEFCEG
+message EntityJumpNotify {
+	// Obf: ONNNDBFLCGB
+	enum Type {
+		NULL = 0;
+		ACTIVE = 1;
+		PASSIVE = 2;
+	}
+	
+	Vector rot = 1;
+	Vector pos = 12;
+	Type jump_type = 2;
+	uint32 entity_id = 5;
+}

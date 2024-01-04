@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+
+import "StopServerInfo.proto";
+
+// CmdId: 24642
+message GetPlayerTokenRsp {
+  repeated uint32 finish_collection_id_list = 952;
+  string accountUid = 3;
+  string birthday = 822;
+  string client_ip_str = 856;
+  string sign = 1326;
+  string server_rand_key = 1632;
+  string GHBHPENFKGH = 1475;
+  bytes extra_bin_data = 7;
+  bytes security_cmd_buffer = 2;
+  string token = 4;
+  string msg = 12;
+  StopServerInfo stop_server = 569;
+  string psn_id = 1075;
+  string country_code = 418;
+  string secret_key = 15;
+  uint64 secret_key_seed = 14;
+  bool is_guest = 10;
+  bool IsProficientPlayer = 52;
+  bool OPLCNIEFAFN = 9;
+  bool HHHFEOKPFCD = 1703;
+  uint32 RegPlatform = 1;
+  uint32 key_id = 351;
+  uint32 PEONMNFOADG = 457;
+  uint32 HANDAGLHBKL = 1837;
+  uint32 OAALCMDDLEH = 1444;
+  uint32 platform_type = 6;
+  uint32 accountType = 5;
+  int32 retcode = 11;
+  uint32 tag = 1490;
+  uint32 black_uid_end_time = 8;
+  uint32 uid = 13;
+  uint32 channel_id = 194;
+}

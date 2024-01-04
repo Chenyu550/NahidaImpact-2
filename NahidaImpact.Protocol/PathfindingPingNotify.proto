@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 2311
+// Obf: IGADOOAJCML
+message PathfindingPingNotify {
+}

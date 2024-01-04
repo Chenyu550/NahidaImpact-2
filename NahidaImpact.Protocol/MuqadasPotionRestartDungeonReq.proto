@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 7410
+// Obf: IAIGMKGLFGE
+message MuqadasPotionRestartDungeonReq {
+}

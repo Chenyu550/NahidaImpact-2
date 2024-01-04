@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 23600
+// Obf: OGEONEOAOEN
+message EvtDestroyServerGadgetNotify {
+	uint32 entity_id = 13;
+}

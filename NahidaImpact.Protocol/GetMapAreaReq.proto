@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 8758
+// Obf: IIOCEMHKDEF
+message GetMapAreaReq {
+}

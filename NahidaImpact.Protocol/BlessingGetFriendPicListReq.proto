@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 26732
+// Obf: LCFNMJDCOLF
+message BlessingGetFriendPicListReq {
+}

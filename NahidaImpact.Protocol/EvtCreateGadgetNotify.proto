@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Vector.proto";
+import "ForwardType.proto";
+message EvtCreateGadgetNotify {
+  Vector init_pos = 9;
+  Vector init_euler_angles = 11;
+  uint32 prop_owner_entity_id = 4;
+  bool is_peer_id_from_player = 580;
+  uint32 room_id = 10;
+  uint32 camp_type = 2;
+  uint32 owner_entity_id = 7;
+  ForwardType forward_type = 13;
+  uint32 config_id = 14;
+  uint32 entity_id = 6;
+  uint32 camp_id = 1;
+}

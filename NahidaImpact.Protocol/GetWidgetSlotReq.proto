@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 24304
+// Obf: BCJMLGNMNHC
+message GetWidgetSlotReq {
+}

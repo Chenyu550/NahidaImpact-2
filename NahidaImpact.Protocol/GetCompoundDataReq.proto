@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 8732
+// Obf: IHBMOEIBEGJ
+message GetCompoundDataReq {
+}

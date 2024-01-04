@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+
+import "ChangeEnergyReason.proto";
+import "ChangeHpReason.proto";
+import "PropChangeReason.proto";
+import "ChangeHpDebts.proto";
+
+message EntityFightPropChangeReasonNotify {
+    //EJGGCHDDMEE detail_info = 1;
+    repeated uint32 param_list = 32;
+    ChangeEnergyReason change_energy_reason = 5;
+    ChangeHpReason change_hp_reason = 11;
+    ChangeHpDebts change_hp_debts = 8;
+    PropChangeReason reason = 3;
+    //float OOGJHIJPGLF = 7;
+    //float prop_delta = 3;
+    uint32 prop_type = 10;
+    uint32 entity_id = 7;
+}

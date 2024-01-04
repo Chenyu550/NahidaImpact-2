@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+// CmdId: 28443
+// Obf: GNAGNBFBJEB
+message SceneTransToPointRsp {
+	int32 retcode = 12;
+	uint32 point_id = 10;
+	uint32 scene_id = 4;
+}

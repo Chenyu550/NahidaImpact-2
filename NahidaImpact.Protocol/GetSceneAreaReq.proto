@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// CmdId: 25175
+// Obf: LABAJDKACOG
+message GetSceneAreaReq {
+	uint32 scene_id = 15;
+	uint32 belong_uid = 8;
+}

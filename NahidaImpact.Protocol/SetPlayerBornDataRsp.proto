@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// CmdId: 22804
+// Obf: CGFIJAMAKEG
+message SetPlayerBornDataRsp {
+	int32 retcode = 3;
+}

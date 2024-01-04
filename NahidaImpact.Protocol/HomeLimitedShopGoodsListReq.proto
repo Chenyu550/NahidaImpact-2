@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// CmdId: 24383
+// Obf: PEEGKBPPJOB
+message HomeLimitedShopGoodsListReq {
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+// Obf: KMHJEPCDMMK
+message HomeMarkPointSuiteData {
+	uint32 suite_id = 1;
+}

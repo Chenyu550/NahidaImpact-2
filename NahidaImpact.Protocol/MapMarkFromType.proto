@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// Obf: PNMEOLJPFCC
+enum MapMarkFromType {
+	MAP_MARK_FROM_TYPE_NONE = 0;
+	MAP_MARK_FROM_TYPE_MONSTER = 1;
+	MAP_MARK_FROM_TYPE_QUEST = 2;
+}

@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message AllWidgetBackgroundActiveStateNotify {
+  	repeated uint32 background_active_widget_list = 4;
+}
