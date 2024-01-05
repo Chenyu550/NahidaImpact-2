@@ -61,6 +61,22 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
             _enterState = SceneEnterState.Complete;
     }
 
+    public async ValueTask TeleportTo(float x, float y, float z)
+    {
+        SceneEntity? entity = _entityManager.GetEntityById(_player.CurAvatarEntityId);
+        if (entity == null) return;
+
+        entity.MotionInfo.Pos = new Vector
+        {
+            X = x,
+            Y = y,
+            Z = z
+        };
+
+        _player.LastMainWorldPos = entity.MotionInfo.Pos;
+        await ReEnterCurScene(EnterType.Jump);
+    }
+
     public async ValueTask ResetAllCoolDownsForAvatar(uint entityId)
     {
         await _entityManager.ChangeAvatarFightPropAsync(entityId, FightProp.FIGHT_PROP_NONEXTRA_SKILL_CD_MINUS_RATIO, 1);
@@ -131,7 +147,9 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
             GameAvatar gameAvatar = _player.Avatars.Find(avatar => avatar.Guid == guid)!;
 
             AvatarEntity avatarEntity = _entityFactory.CreateAvatar(gameAvatar, _player.Uid);
-            avatarEntity.SetPosition(2336.789f, 249.98896f, -751.3081f);
+
+            Vector initialPos = _player.LastMainWorldPos;
+            avatarEntity.SetPosition(initialPos.X, initialPos.Y, initialPos.Z);
 
             _teamAvatars.Add(avatarEntity);
         }
@@ -156,7 +174,12 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
         return ValueTask.CompletedTask;
     }
 
-    public async ValueTask EnterSceneAsync(uint sceneId)
+    public async ValueTask ReEnterCurScene(EnterType enterType)
+    {
+        await EnterSceneAsync(_sceneId, enterType);
+    }
+
+    public async ValueTask EnterSceneAsync(uint sceneId, EnterType enterType = EnterType.Self)
     {
         if (_beginTime != 0) ResetState();
 
@@ -165,21 +188,17 @@ internal class SceneManager(NetSession session, Player player, EntityManager ent
         EnterToken = ++_enterTokenSeed;
 
         _enterState = SceneEnterState.EnterRequested;
+
         await _session.NotifyAsync(CmdType.PlayerEnterSceneNotify, new PlayerEnterSceneNotify
         {
             SceneBeginTime = _beginTime,
             SceneId = _sceneId,
             SceneTransaction = CreateTransaction(_sceneId, _player.Uid, _beginTime),
-            Pos = new()
-            {
-                X = 2191.16357421875f,
-                Y = 214.65115356445312f,
-                Z = -1120.633056640625f
-            },
+            Pos = _player.LastMainWorldPos,
             TargetUid = _player.Uid,
             EnterSceneToken = EnterToken,
             PrevPos = new(),
-            Type = EnterType.Self
+            Type = enterType
         });
     }
 

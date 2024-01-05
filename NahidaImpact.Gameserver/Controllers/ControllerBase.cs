@@ -22,4 +22,14 @@ internal abstract class ControllerBase
             Body = message.ToByteArray()
         });
     }
+
+    protected IResult Response(CmdType cmdType)
+    {
+        return new SinglePacketResult(new()
+        {
+            CmdType = cmdType,
+            Head = Memory<byte>.Empty,
+            Body = Memory<byte>.Empty
+        });
+    }
 }

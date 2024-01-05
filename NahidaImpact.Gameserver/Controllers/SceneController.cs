@@ -12,6 +12,19 @@ namespace NahidaImpact.Gameserver.Controllers;
 [NetController]
 internal class SceneController : ControllerBase
 {
+    [NetCommand(CmdType.MarkMapReq)]
+    public async ValueTask<IResult> OnMarkMapReq(SceneManager sceneManager)
+    {
+        MarkMapReq request = Packet!.DecodeBody<MarkMapReq>();
+        if (request.Mark != null)
+        {
+            Vector teleportToPosition = request.Mark.Pos;
+            await sceneManager.TeleportTo(teleportToPosition.X, 800, teleportToPosition.Z);
+        }
+
+        return Response(CmdType.MarkMapRsp);
+    }
+
     [NetCommand(CmdType.EvtDoSkillSuccNotify)]
     public async ValueTask<IResult> OnEvtDoSkillSuccNotify(SceneManager sceneManager)
     {

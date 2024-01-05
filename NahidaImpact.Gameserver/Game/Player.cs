@@ -16,6 +16,7 @@ internal class Player(ExcelTableCollection excelTables)
     public uint CurTeamIndex { get; set; }
 
     public uint CurAvatarEntityId { get; set; }
+    public Vector LastMainWorldPos { get; set; } = new();
 
     private readonly ExcelTableCollection _excelTables = excelTables;
 
@@ -35,10 +36,20 @@ internal class Player(ExcelTableCollection excelTables)
             Index = 1
         });
         CurTeamIndex = 1;
+
+        LastMainWorldPos = GetDefaultMainWorldPos();
     }
 
+    private Vector GetDefaultMainWorldPos() => new()
+    {
+        X = 2336.789f,
+        Y = 249.98896f,
+        Z = -751.3081f
+    };
+
+
     public GameAvatarTeam GetCurrentTeam()
-        => AvatarTeams.Find(team => team.Index == CurTeamIndex)!;
+            => AvatarTeams.Find(team => team.Index == CurTeamIndex)!;
 
     public bool TryGetAvatar(uint avatarId, [MaybeNullWhen(false)] out GameAvatar avatar)
         => (avatar = Avatars.Find(a => a.AvatarId == avatarId)) != null;
